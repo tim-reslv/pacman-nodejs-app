@@ -1,0 +1,40 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: pacman-prd
+  namespace: pacman
+  labels:
+    name: pacman-prd
+spec:
+  host: pacman.apps.ocppwx-prd.ro22.p1.openshiftapps.com
+  to:
+    kind: Service
+    name: pacman
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
+  wildcardPolicy: None
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: pacman-dr
+  namespace: pacman
+  labels:
+    name: pacman-dr
+spec:
+  host: pacman.apps.ocppwx-dr.0c0p.p1.openshiftapps.com
+  to:
+    kind: Service
+    name: pacman
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
+  wildcardPolicy: None
