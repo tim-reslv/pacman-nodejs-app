@@ -15,7 +15,7 @@ spec:
         name: mongo
     spec:
       containers:
-      - image: docker.io/tim707/mongo
+      - image: mongo:4.0
         name: mongo
         ports:
         - name: mongo
