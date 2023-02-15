@@ -5,7 +5,7 @@ metadata:
   name: pacman-prd
   namespace: pacman
   labels:
-    name: pacman-prd
+    app: pacman-prd
 spec:
   host: pacman.apps.ocppwx-prd.ro22.p1.openshiftapps.com
   to:
@@ -25,7 +25,7 @@ metadata:
   name: pacman-dr
   namespace: pacman
   labels:
-    name: pacman-dr
+    app: pacman-dr
 spec:
   host: pacman.apps.ocppwx-dr.0c0p.p1.openshiftapps.com
   to:

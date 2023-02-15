@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    name: pacman
+    app: pacman
   name: pacman
 spec:
   replicas: 1
   selector:
     matchLabels:
-        name: pacman
+      app: pacman
   template:
     metadata:
       labels:
-        name: pacman
+        app: pacman
     spec:
       containers:
       - image: tim707/pacman-nodejs-app:latest
@@ -20,4 +20,3 @@ spec:
         ports:
         - containerPort: 8080
           name: http-server
-

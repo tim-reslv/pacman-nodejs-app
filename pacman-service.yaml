@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: pacman
   labels:
-    name: pacman
+    app: pacman
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
       targetPort: 8080
       protocol: TCP
   selector:
-    name: pacman
+    app: pacman
